@@ -1,0 +1,42 @@
+# 环境与密钥
+.env
+.env.local
+.env.*.local
+
+# 运行时数据（用户自己的训记缓存，勿提交）
+data/cache/**
+!data/cache/.gitkeep
+data/analysis.json
+data/sync_status.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node / 前端
+web/node_modules/
+web/dist/
+npm-debug.log*
+
+# 本地运维
+.dashboard.log
+.dashboard.pid
+*.log
+
+# 小红书等账号运营物料（私有，不入库）
+content/
+images/
+scripts/generate_article_images.py
+scripts/generate_cards.py
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# 私有 Cursor 配置（可选保留 skills；本地密钥勿提交）
+# .cursor/ 可按需提交；本仓库 skills 不含密钥

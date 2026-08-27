@@ -1,0 +1,44 @@
+# 训记训练数据 Dashboard — 独立 Docker Compose
+# 与 lead-radar 等其他项目完全解耦，单独构建、启动、升级
+
+name: xunji-dashboard
+
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: xunji-dashboard:latest
+    container_name: xunji-dashboard
+    restart: unless-stopped
+    ports:
+      - "${DASHBOARD_PORT:-8080}:8080"
+    environment:
+      TZ: ${TZ:-Asia/Shanghai}
+      DATA_DIR: /app/data
+      STATIC_DIR: /app/web/dist
+      SYNC_ENABLED: ${SYNC_ENABLED:-true}
+      SYNC_CRON: ${SYNC_CRON:-30 6 * * *}
+      SYNC_REFRESH_DAYS: ${SYNC_REFRESH_DAYS:-3}
+      XUNJI_API_KEY: ${XUNJI_API_KEY:-}
+    volumes:
+      # 仅挂载数据目录；cache / analysis.json 在宿主机维护
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/api/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - xunji-dashboard-net
+
+networks:
+  xunji-dashboard-net:
+    name: xunji-dashboard-net
+    driver: bridge

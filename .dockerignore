@@ -1,0 +1,9 @@
+node_modules
+web/node_modules
+web/dist
+.git
+.cursor
+images
+*.png
+__pycache__
+.env
