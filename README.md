@@ -1,4 +1,4 @@
-# 训记训练数据 Dashboard
+<img width="1428" height="1273" alt="image" src="https://github.com/user-attachments/assets/edee0eaf-1056-4d1b-b9ce-4233cd65fe9a" /># 训记训练数据 Dashboard
 
 基于[训记](https://xunjiapp.cn) Open API 的**自托管**训练数据看板：减脂 / 增肌多维分析、训练日历下钻、动作进步曲线。
 
@@ -16,6 +16,13 @@
 | 训练日历 | 热力图；下钻看当日完整训练 |
 
 图表支持多维下钻（月 / 周 / 部位 / 动作 / 日）。
+
+<img width="1428" height="1273" alt="image" src="https://github.com/user-attachments/assets/dc9d7a37-1ca5-4173-ba6c-50c7b9dd1786" />
+<img width="1429" height="1266" alt="image" src="https://github.com/user-attachments/assets/a022a07b-4583-4b61-aff0-7b5316a6277e" />
+<img width="1431" height="1265" alt="image" src="https://github.com/user-attachments/assets/15be79e6-4560-419a-8c54-233ec04f03aa" />
+
+
+
 
 ## 前置条件
 
