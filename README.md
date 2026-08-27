@@ -1,4 +1,4 @@
-<img width="1428" height="1273" alt="image" src="https://github.com/user-attachments/assets/edee0eaf-1056-4d1b-b9ce-4233cd65fe9a" /># 训记训练数据 Dashboard
+# 训记训练数据 Dashboard
 
 基于[训记](https://xunjiapp.cn) Open API 的**自托管**训练数据看板：减脂 / 增肌多维分析、训练日历下钻、动作进步曲线。
 
